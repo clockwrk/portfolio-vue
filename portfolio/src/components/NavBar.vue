@@ -6,11 +6,35 @@
           Say Hello
       </a>
 
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navigationMenu">
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navigationMenu" @click="toggleMenu()">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span> 
       </a>
+    </div>
+
+    <div id="navigationMenu" class="navbar-menu" v-bind:class="[isActive ? 'is-active':'']">
+      <div class="navbar-start">
+        <a class="navbar-item">
+          Home
+        </a>
+
+        <a class="navbar-item">
+          About Me
+        </a>
+
+        <a class="navbar-item">
+          Skills
+        </a>
+
+        <a class="navbar-item">
+          Projects
+        </a>
+
+        <a class="navbar-item">
+          Social
+        </a>
+      </div>
     </div>
   </nav>
 
@@ -64,6 +88,12 @@
 
 export default {
   name: 'NavBar',
+    data() {
+    return {
+      isContactFormActive: false,
+      isActive: false
+    }
+  },
   methods: {
     formModal() {
 
@@ -72,12 +102,9 @@ export default {
         component: ModalForm,
         hasModalCard: true
       })
-    }
-  },
-  data() {
-    return {
-      isContactFormActive: false,
-
+    },
+    toggleMenu() {
+      this.isActive = !this.isActive
     }
   }
 }
