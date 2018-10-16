@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item button is-primary is-medium"
+      <a class="navbar-item button is-info is-outlined"
           @click="formModal()">
           Say Hello
       </a>
@@ -13,11 +13,12 @@
       </a>
     </div>
 
-    <div id="navigationMenu" class="navbar-menu" v-bind:class="[isActive ? 'is-active':'']">
+    <div id="navigationMenu" class="navbar-menu is-transparent" v-bind:class="[isActive ? 'is-active':'']">
       <div class="navbar-start">
         <a class="navbar-item">
           Home
         </a>
+      </div>
 
         <a class="navbar-item">
           About Me
@@ -31,10 +32,12 @@
           Projects
         </a>
 
+      <div class="navbar-end">
         <a class="navbar-item">
           Social
         </a>
       </div>
+
     </div>
   </nav>
 
@@ -99,8 +102,7 @@ export default {
 
       this.$modal.open({
         parent: this,
-        component: ModalForm,
-        hasModalCard: true
+        component: ModalForm
       })
     },
     toggleMenu() {

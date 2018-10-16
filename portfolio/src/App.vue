@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <NavBar></Navbar>
-    <section>About Me</section>
-    <section>Skills</section>
-    <section>Projects</section>
-    <section>Social</section> 
+    <section id="Home">Home</section>
+    <section id="AboutMe">About Me</section>
+    <section id="Skills">Skills</section>
+    <section id="Projects">Projects</section>
+    <section id="Social">Social</section> 
   </div>
 </template>
 
@@ -28,6 +29,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+section {
+  height: 100vh;
+}
+
+section-first {
+  height: 90vh;
 }
 </style>
