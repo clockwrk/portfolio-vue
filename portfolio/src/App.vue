@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NavBar></Navbar>
-    <section id="Home">Home</section>
+    <Home></Home>
     <section id="AboutMe">About Me</section>
     <section id="Skills">Skills</section>
     <section id="Projects">Projects</section>
@@ -12,12 +12,14 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar.vue'
+import Home from './components/Home.vue'
 
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    NavBar
+    NavBar,
+    Home
   }
 }
 </script>
@@ -35,7 +37,7 @@ section {
   height: 100vh;
 }
 
-section-first {
-  height: 90vh;
+section:first-of-type {
+  height: 100vh;
 }
 </style>

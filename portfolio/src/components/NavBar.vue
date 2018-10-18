@@ -13,27 +13,27 @@
       </a>
     </div>
 
-    <div id="navigationMenu" class="navbar-menu is-transparent" v-bind:class="[isActive ? 'is-active':'']">
+    <div id="navigationMenu" class="navbar-menu is-transparent" v-bind:class="[isActive ? 'is-active':'']" v-on:click="toggleMenu()">
       <div class="navbar-start">
-        <a class="navbar-item">
+        <a class="navbar-item" v-scroll-to="'#Home'">
           Home
         </a>
       </div>
 
-        <a class="navbar-item">
+        <a class="navbar-item" v-scroll-to="'#AboutMe'">
           About Me
         </a>
 
-        <a class="navbar-item">
+        <a class="navbar-item" v-scroll-to="'#Skills'">
           Skills
         </a>
 
-        <a class="navbar-item">
+        <a class="navbar-item" v-scroll-to="'#Projects'">
           Projects
         </a>
 
       <div class="navbar-end">
-        <a class="navbar-item">
+        <a class="navbar-item" v-scroll-to="'#Social'">
           Social
         </a>
       </div>
@@ -113,5 +113,19 @@ export default {
 </script>
 
 <style scoped>
+.navbar {
+  /* overflow: hidden; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-item.button.is-info.is-outlined {
+  position: absolute;
+  margin-left: 5px;;
+
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 </style>
