@@ -1,12 +1,12 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item button is-info is-outlined"
+      <a class="navbar-item button is-outlined is-rounded"
           @click="formModal()">
           Say Hello
       </a>
 
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navigationMenu" @click="toggleMenu()">
+      <a role="button" class="navbar-burger burger " aria-label="menu" aria-expanded="false" data-target="navigationMenu" @click="toggleMenu()">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span> 
@@ -14,11 +14,11 @@
     </div>
 
     <div id="navigationMenu" class="navbar-menu is-transparent" v-bind:class="[isActive ? 'is-active':'']" v-on:click="toggleMenu()">
-      <div class="navbar-start">
+      <div class="navbar-end">
         <a class="navbar-item" v-scroll-to="'#Home'">
           Home
         </a>
-      </div>
+      
 
         <a class="navbar-item" v-scroll-to="'#AboutMe'">
           About Me
@@ -32,7 +32,7 @@
           Projects
         </a>
 
-      <div class="navbar-end">
+
         <a class="navbar-item" v-scroll-to="'#Social'">
           Social
         </a>
@@ -114,18 +114,17 @@ export default {
 
 <style scoped>
 .navbar {
-  /* overflow: hidden; */
+  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-.navbar-item.button.is-info.is-outlined {
-  position: absolute;
-  margin-left: 5px;;
-
-  top: 50%;
-  transform: translateY(-50%);
+.navbar-item.button {
+  /* position: absolute; */
+  margin-left: 5px;
+  top: 10px;
+  /* transform: translateY(-50%);  */
 }
 
 </style>
