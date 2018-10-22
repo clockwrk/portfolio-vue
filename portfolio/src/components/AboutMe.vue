@@ -12,17 +12,11 @@
 
 <script>
 export default {
-    name: 'Home'
+    name: 'AboutMe'
 }
 </script>
 
 <style scoped>
-
-img {
-    width: 70%;
-    border-radius: 40%;
-}
-
 
 
 </style>
