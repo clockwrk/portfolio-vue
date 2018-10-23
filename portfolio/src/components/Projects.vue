@@ -2,22 +2,14 @@
     <section id="Projects">Projects!!
 <div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true">
   <div class='carousel-container'>
-    <div class='carousel-item has-background is-active'>
-      <img class="is-background" src="https://wikiki.github.io/images/merry-christmas.jpg" alt="" width="640" height="310" />
-      <div class="title">Merry Christmas</div>
+    <div v-for="(project,index) in projects" :key="index"
+      :class="{'is-active' : index === 0 }"
+      class='carousel-item has-background'>
+      <img class="is-background" :src="project.imageURL" alt="" width="640" height="310"/>
+      <div class="title">{{project.title}}</div>
+      
     </div>
-    <div class='carousel-item has-background'>
-      <img class="is-background" src="https://wikiki.github.io/images/singer.jpg" alt="" width="640" height="310" />
-      <div class="title">Original Gift: Offer a song with <a href="https://lasongbox.com" target="_blank">La Song Box</a></div>
-    </div>
-    <div class='carousel-item has-background'>
-      <img class="is-background" src="https://wikiki.github.io/images/sushi.jpg" alt="" width="640" height="310" />
-      <div class="title">Sushi time</div>
-    </div>
-    <div class='carousel-item has-background'>
-      <img class="is-background" src="https://wikiki.github.io/images/life.jpg" alt="" width="640" height="310" />
-      <div class="title">Life</div>
-    </div>
+
   </div>
   <div class="carousel-navigation is-overlay">
     <div class="carousel-nav-left">
@@ -41,7 +33,26 @@
 //  }()); 
  
 export default {
-    name: "Projects"
+    name: "Projects",
+    data () {
+      return {
+        projects: [
+          {
+            title: 'Original Gift: Offer a song with',
+            imageURL: 'https://wikiki.github.io/images/singer.jpg',
+            isActive: true
+          },{
+            title: 'Sushi Time',
+            imageURL: 'https://wikiki.github.io/images/sushi.jpg',
+            isActive: false
+          },{
+            title: 'Life',
+            imageURL: 'https://wikiki.github.io/images/life.jpg',
+            isActive: false
+          }
+        ]
+      }
+    }
     
 }
 </script>
