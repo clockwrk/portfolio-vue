@@ -1,7 +1,7 @@
 <template>
   <section id="Projects">Projects!!
     <div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true">
-      <div class='carousel-container'>
+      <div  class='carousel-container'>
         <div v-for="(project,index) in projects" :key="index"
           :class="{'is-active' : index === 0 }"
           class='carousel-item has-background'>
@@ -10,7 +10,7 @@
         </div>
 
       </div>
-      <div class="carousel-navigation is-overlay">
+      <div v-show="!isProjectModalActive" class="carousel-navigation is-overlay">
         <div class="carousel-nav-left">
           <i class="fa fa-chevron-left" aria-hidden="true"></i>
         </div>
@@ -21,7 +21,7 @@
     </div>
         <b-modal :active.sync="isProjectModalActive" :width="640" scroll="keep">
           <div class="card">
-              <div class="card-image">
+              <div class="hero is-medium card-image">
                   <figure class="image is-4by3">
                       <img :src="currentProject.imageURL" alt="Image">
                   </figure>
@@ -58,17 +58,17 @@ export default {
     data () {
       let projects =  [
           {
-            title: 'Original Gift: Offer a song with',
-            imageURL: 'https://wikiki.github.io/images/singer.jpg',
+            title: 'Bumble and Bumble Meme generator',
+            imageURL: require('@/assets/meme-generator-hero-image.jpg'),
+            isActive: false
+          },{
+            title: 'William Sonoma Products Page example',
+            imageURL: require('@/assets/willsono.png'),
+            isActive: false
+          },{
+            title: 'Imvue',
+            imageURL: require('@/assets/ImVue-min.png'),
             isActive: true
-          },{
-            title: 'Sushi Time',
-            imageURL: 'https://wikiki.github.io/images/sushi.jpg',
-            isActive: false
-          },{
-            title: 'Life',
-            imageURL: 'https://wikiki.github.io/images/life.jpg',
-            isActive: false
           }
         ]
 
