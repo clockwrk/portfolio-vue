@@ -4,9 +4,9 @@
     <Home></Home>
     <section id="AboutMe">About Me</section>
     <section id="Skills">Skills</section>
-
     <Projects></Projects>
-    <section id="Social">Social</section> 
+    <Social></Social>
+    <!-- <section id="Social">Social</section>  -->
   </div>
 </template>
 
@@ -15,6 +15,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import NavBar from './components/NavBar.vue'
 import Home from './components/Home.vue'
 import Projects from './components/Projects.vue'
+import Social from './components/Social.vue'
 
 export default {
   name: 'app',
@@ -22,7 +23,8 @@ export default {
     HelloWorld,
     NavBar,
     Home,
-    Projects
+    Projects,
+    Social
   }
 }
 </script>

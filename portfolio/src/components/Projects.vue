@@ -1,12 +1,18 @@
 <template>
-  <section id="Projects">Projects!!
-    <div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true">
+  <section id="Projects">
+    <div class="container is-narrow">
+      <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
+        Projects
+      </h1>
+      <h2 class="subtitle is-size-5-desktop">Some examples of what I can do</h2>
+    <div class='carousel carousel-animated carousel-animate-slide ' data-autoplay="true">
       <div  class='carousel-container'>
         <div v-for="(project,index) in projects" :key="index"
           :class="{'is-active' : index === 0 }"
           class='carousel-item has-background'>
-          <img @click="projectModalActive(index)" class="is-background" :src="project.imageURL" alt="" width="640" height="310"/>
-          <div class="title">{{project.title}}</div>
+          <div class="content-overlay has-text-centered">{{project.title}}</div>
+          <img @click="projectModalActive(index)" class="carousel-img is-background" :src="project.imageURL" alt="" width="640" height="310"/>
+          <!-- <div class="title">{{project.title}}</div> -->
         </div>
 
       </div>
@@ -19,35 +25,32 @@
         </div>
       </div>
     </div>
+    </div>
         <b-modal :active.sync="isProjectModalActive" :width="640" scroll="keep">
           <div class="card">
               <div class="hero is-medium card-image">
-                  <figure class="image is-4by3">
+
                       <img :src="currentProject.imageURL" alt="Image">
-                  </figure>
+
               </div>
               <div class="card-content">
                   <div class="media">
-                      <!-- <div class="media-left">
-                          <figure class="image is-48x48">
-                              <img src="/static/img/placeholder-1280x960.png" alt="Image">
-                          </figure>
-                      </div> -->
+
                       <div class="media-content">
                           <p class="title is-4">{{currentProject.title}}</p>
                       </div>
                   </div>
 
                   <div class="content">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                      <a>#css</a> <a>#responsive</a>
-                      <br>
-                      <small>11:09 PM - 1 Jan 2016</small>
+                     {{currentProject.description}}
+
                   </div>
+                   <strong class="has-text-centered"><a :href="currentProject.liveSite"  target="_blank">Live Site</a></strong>
+
               </div>
           </div>
       </b-modal>
+
   </section>
 </template>
 
@@ -60,15 +63,23 @@ export default {
           {
             title: 'Bumble and Bumble Meme generator',
             imageURL: require('@/assets/meme-generator-hero-image.jpg'),
-            isActive: false
+            isActive: false,
+            client: 'Bumble and Bumble an Estee Lauder Company',
+            description: 'A meme generator application that can combine user uploaded images with brand approved text. The user created content can then be download, emailed or shared through social media platforms such as Facebook, Pinterest, and Twitter.',
+            liveSite: 'https://www.bumbleandbumble.com/_efb/meme/'
           },{
             title: 'William Sonoma Products Page example',
             imageURL: require('@/assets/willsono.png'),
-            isActive: false
+            isActive: false,
+            client: 'William Sonoma',
+            description: 'Created as a coding challenge. Consumed a json object provided by william sonoma and created a responsively designed product page.',
+            liveSite: 'https://agile-river-35869.herokuapp.com/'
           },{
-            title: 'Imvue',
-            imageURL: require('@/assets/ImVue-min.png'),
-            isActive: true
+            title: 'Color-Shapes-Canvas',
+            imageURL: require('@/assets/colors-shapes.jpeg'),
+            client: 'Personal Project',
+            description: 'Wanted to create something interactive and fun. Using react and canvas I created an animation loop that creates different floating shapes ontouch.',
+            liveSite: 'https://damp-reef-32568.herokuapp.com/'
           }
         ]
 
@@ -92,7 +103,13 @@ export default {
 </script>
 
 <style scoped>
+.carousel-img {
+  max-width: 80%;
 
+}
+.carousel-img:hover {
+  opacity: .5;
+}
 
 </style>
 
