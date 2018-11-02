@@ -103,6 +103,10 @@ export default {
 </script>
 
 <style scoped>
+section {
+  height: 100vh;
+}
+
 .carousel-img {
   max-width: 80%;
 

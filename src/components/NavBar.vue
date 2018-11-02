@@ -45,10 +45,12 @@
 </template>
 
 <script>
+import axios from 'axios';
+
   const ModalForm = {
-    props: ['email', 'message', 'name'],
+    props: ['form', 'onSubmitForm'],
     template: `
-      <form action="">
+      <form v-on:submit.prevent="onSubmitForm()">
         <div class="modal-card" style="width: auto">
           <header class="modal-card-head">
             <p class="modal-card-title">Contact Me</p>
@@ -56,7 +58,7 @@
           <section class="modal-card-body">
             <b-field label="Name">
               <b-input
-                :value="name"
+                v-model="form.name"
                 placeholder="Your name"
                 required>
               </b-input>
@@ -65,7 +67,7 @@
             <b-field label="Email">
               <b-input
                 type="email"
-                :value="email"
+                v-model="form.email"
                 placeholder="Your email"
                 required>
               </b-input>
@@ -74,7 +76,7 @@
             <b-field label="Message">
               <b-input
                 type="textarea"
-                :value="message"
+                v-model="form.message"
                 placeholder="Your Message"
                 required>
               </b-input>
@@ -82,7 +84,7 @@
           </section>
           <footer class="modal-card-foot">
             <button class="button" type="button" @click="$parent.close()">Close</button>
-            <button class="button is-primary">Send</button>
+            <button class="button is-primary" type="submit" @click="$parent.close()"  :disabled="(!!form.email && !!form.message) != 1 ">Send</button>
           </footer>
         </div>  
       </form>
@@ -91,10 +93,15 @@
 
 export default {
   name: 'NavBar',
-    data() {
+  data() {
     return {
       isContactFormActive: false,
-      isActive: false
+      isActive: false,
+      form: {
+        email: "",
+        name: "",
+        message: ""
+      }
     }
   },
   methods: {
@@ -102,11 +109,39 @@ export default {
 
       this.$modal.open({
         parent: this,
-        component: ModalForm
+        component: ModalForm,
+        form: this.form,
+        props: {
+          form:this.form,
+          onSubmitForm: this.onSubmitForm
+          },
+        animation: "zoom-out"
       })
     },
     toggleMenu() {
       this.isActive = !this.isActive
+    },
+    onSubmitForm() {
+      
+
+      var input = this.form;
+      this.form = {
+        name: "",
+        email: "",
+        message: ""
+      }
+      // eslint-disable-next-line
+      console.log('input field',input)
+      axios.post('/send-email', input)
+      .then(response => {
+        // eslint-disable-next-line
+        console.log('sucessful post', response, 'SHOULD CLOSE NOW')
+
+        
+      })
+      .catch(e => {
+        this.errors.push(e);
+      });
     }
   }
 }
