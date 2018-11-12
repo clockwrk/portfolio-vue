@@ -2,7 +2,10 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item button is-outlined is-rounded"
-          @click="formModal()">
+
+          @click="isCardModalActive = true"
+          v-show="!isActive"
+          >
           Say Hello
       </a>
 
@@ -13,7 +16,7 @@
       </a>
     </div>
 
-    <div id="navigationMenu" class="navbar-menu is-transparent" v-bind:class="[isActive ? 'is-active':'']" v-on:click="toggleMenu()">
+    <div id="navigationMenu" class="navbar-menu is-transparent"  v-on:click="toggleMenu()" v-bind:class="{ 'fade-in': isActive, 'fade-out':!isActive, 'is-active':isActive}">
       <div class="navbar-end">
         <a class="navbar-item" v-scroll-to="'#Home'">
           Home
@@ -39,18 +42,10 @@
       </div>
 
     </div>
-  </nav>
 
+  <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
 
-</template>
-
-<script>
-import axios from 'axios';
-
-  const ModalForm = {
-    props: ['form', 'onSubmitForm'],
-    template: `
-      <form v-on:submit.prevent="onSubmitForm()">
+    <form v-on:submit.prevent="onSubmitForm()">
         <div class="modal-card" style="width: auto">
           <header class="modal-card-head">
             <p class="modal-card-title">Contact Me</p>
@@ -83,13 +78,23 @@ import axios from 'axios';
             </b-field>
           </div>
           <footer class="modal-card-foot">
-            <button class="button" type="button" @click="$parent.close()">Close</button>
-            <button class="button is-primary" type="submit" @click=" $parent.close();"  :disabled="(!!form.email && !!form.message) != 1 ">Send</button>
+            <button class="button" type="button" @click="close()">Close</button>
+            <button class="button is-primary" type="submit"  :disabled="(!!form.email && !!form.message) != 1 ">Send</button>
           </footer>
         </div>  
       </form>
-    `
-  }
+        </b-modal>
+
+
+  </nav>
+
+  
+
+
+</template>
+
+<script>
+import axios from 'axios';
 
 export default {
   name: 'NavBar',
@@ -101,28 +106,23 @@ export default {
         email: "",
         name: "",
         message: ""
-      }
+      },
+      errors: [],
+      isCardModalActive: false
     }
   },
   methods: {
-    formModal() {
-
-      this.$modal.open({
-        parent: this,
-        component: ModalForm,
-        form: this.form,
-        props: {
-          form:this.form,
-          onSubmitForm: this.onSubmitForm
-          },
-        animation: "zoom-out"
-      })
-    },
     toggleMenu() {
       this.isActive = !this.isActive
-    },
-    onSubmitForm() {
       
+
+    },
+    close(){
+
+      this.isCardModalActive = false;
+    },
+    onSubmitForm: function(){     
+      this.isCardModalActive = false;
 
       var input = this.form;
       this.form = {
@@ -133,21 +133,27 @@ export default {
       // eslint-disable-next-line
       console.log('input field',input)
       axios.post('/send-email', input)
-      .then(response => {
+      .then(function(response) {
         // eslint-disable-next-line
         console.log('sucessful post', response, 'SHOULD CLOSE NOW')
 
         
       })
-      .catch(e => {
-        this.errors.push(e);
+      .catch(function() {
+        //this.errors.push(e);
+
+
       });
+
     }
   }
 }
 </script>
 
 <style scoped>
+.modal-card-body {
+  text-align: left !important;
+}
 .navbar {
   overflow: hidden;
   position: fixed;
@@ -156,10 +162,19 @@ export default {
 }
 
 .navbar-item.button {
-  /* position: absolute; */
   margin-left: 5px;
   top: 10px;
-  /* transform: translateY(-50%);  */
 }
+
+.fade-in {
+    opacity: 1;
+    transition: 2s opacity;
+}
+.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+
 
 </style>

@@ -37,7 +37,7 @@
                   <div class="media">
 
                       <div class="media-content">
-                          <p class="title is-4">{{currentProject.title}}</p>
+                          <p class="title is-4 has-text-centered">{{currentProject.title}}</p>
                       </div>
                   </div>
 
@@ -118,6 +118,15 @@ section {
 
 .carousel-img .is-background {
   height: 50vh;
+}
+
+.card-image {
+  margin: 0 auto;
+  width:  70%; /*or 70%, or what you want*/
+  max-height: 20%; /*or 70%, or what you want*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 </style>
