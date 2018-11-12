@@ -55,7 +55,7 @@ import axios from 'axios';
           <header class="modal-card-head">
             <p class="modal-card-title">Contact Me</p>
           </header>
-          <section class="modal-card-body">
+          <div class="modal-card-body">
             <b-field label="Name">
               <b-input
                 v-model="form.name"
@@ -81,10 +81,10 @@ import axios from 'axios';
                 required>
               </b-input>
             </b-field>
-          </section>
+          </div>
           <footer class="modal-card-foot">
             <button class="button" type="button" @click="$parent.close()">Close</button>
-            <button class="button is-primary" type="submit" @click="$parent.close()"  :disabled="(!!form.email && !!form.message) != 1 ">Send</button>
+            <button class="button is-primary" type="submit" @click=" $parent.close();"  :disabled="(!!form.email && !!form.message) != 1 ">Send</button>
           </footer>
         </div>  
       </form>

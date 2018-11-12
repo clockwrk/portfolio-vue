@@ -3,7 +3,8 @@
     <NavBar></Navbar>
     <Home></Home>
     <section id="AboutMe">About Me</section>
-    <section id="Skills">Skills</section>
+    <!-- <section id="Skills">Skills</section> -->
+    <Skills></Skills>
     <Projects></Projects>
     <Social></Social>
     <!-- <section id="Social">Social</section>  -->
@@ -16,6 +17,7 @@ import NavBar from './components/NavBar.vue'
 import Home from './components/Home.vue'
 import Projects from './components/Projects.vue'
 import Social from './components/Social.vue'
+import Skills from './components/Skills.vue'
 
 export default {
   name: 'app',
@@ -24,7 +26,8 @@ export default {
     NavBar,
     Home,
     Projects,
-    Social
+    Social,
+    Skills
   }
 }
 </script>
@@ -40,7 +43,7 @@ export default {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 section:first-of-type {

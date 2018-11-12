@@ -10,9 +10,14 @@ import 'bulma/css/bulma.min.css'
 // import 'bulma'
 // import 'bulma-extensions/dist/bulma-extensions.min.css'
 // import 'bulma-extensions/bulma-carousel/dist/bulma-carousel.min.css'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCode, faClipboardList } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+library.add(faCode)
+library.add(faClipboardList)
 
-
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(Buefy)
 Vue.use(vueScrollto)

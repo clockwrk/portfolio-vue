@@ -108,11 +108,16 @@ section {
 }
 
 .carousel-img {
-  max-width: 80%;
+  max-width: 80vw;
+  max-height: 50vh;
 
 }
 .carousel-img:hover {
   opacity: .5;
+}
+
+.carousel-img .is-background {
+  height: 50vh;
 }
 
 </style>

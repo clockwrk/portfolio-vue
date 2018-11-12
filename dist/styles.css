@@ -1,0 +1,30 @@
+html {
+    background-color: white;
+    position: relative;
+}
+
+body {
+    opacity: 1;
+    transition: 1s opacity;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+
+/* html, body {
+    height: 100%;
+
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+} */
+
