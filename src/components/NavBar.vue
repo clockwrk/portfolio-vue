@@ -3,8 +3,8 @@
     <div class="navbar-brand">
       <a class="navbar-item button is-outlined is-rounded"
 
-          @click="isCardModalActive = true"
-          v-show="!isActive"
+          @click="openContactForm()"
+
           >
           Say Hello
       </a>
@@ -116,6 +116,8 @@ export default {
       this.isActive = !this.isActive
       
 
+    },openContactForm() {
+      this.isCardModalActive = true;
     },
     close(){
 
