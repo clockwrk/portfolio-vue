@@ -3,7 +3,8 @@ const path = require('path');
 const serveStatic = require('serve-static');
 const nodeMailer = require('nodemailer');
 const bodyParser = require('body-parser');
-// const {google} = require('googleapis');
+const mime = require('mime');
+const fs = require('fs');
 
 require('dotenv').config();
 
@@ -13,17 +14,7 @@ console.log('pass', process.env.GMAIL_PASS);
 app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-// app.use(serveStatic(__dirname + '/dist'));
 app.use(express.static(__dirname + '/dist'));
-
-// app.get('/route', function(req, res){
-//     console.log('route')
-//     res.send('route')
-// })
-
-// app.get('/', function(req, res){
-//     res.send(200);
-// })
 
 app.post('/send-email', function(req, res) {
     console.log('send-mail')
@@ -59,8 +50,14 @@ app.post('/send-email', function(req, res) {
             res.send('contact-success')
         }
     });
-
 });
+
+app.get('/resume', function(req, res){
+    let file = path.join(__dirname, './src/assets/Jose_Renteria_Resume.pdf');
+    res.download(file);
+});
+
+
 
 const port = process.env.PORT || 5000;
 app.listen(port);

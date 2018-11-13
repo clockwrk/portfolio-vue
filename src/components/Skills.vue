@@ -7,10 +7,10 @@
               <div class="column">
                 <!-- <figure class="image"><img class="is-skill-icon" src="img/icon-designer.svg"></figure> -->
                 <font-awesome-icon icon="clipboard-list" size="5x" />
-                <h1 class="title is-size-4 is-spaced">Designer</h1>
-                <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-                <p class="list-title has-text-primary has-text-weight-normal">Things I enjoy designing:</p>
-                <p>UX, UI, Web, Mobile, Apps, Logos</p>
+                <h1 class="title is-size-4 is-spaced">Developer</h1>
+                <p>I'm curious how things work.</p>
+                <p class="list-title has-text-primary has-text-weight-normal">Front-end frameworks I've used</p>
+                <p>Vue, React, AngularJS</p>
                 <p class="list-title has-text-primary has-text-weight-normal">Design Tools:</p>
                 <ul>
                   <li>Balsamiq Mockups</li>
