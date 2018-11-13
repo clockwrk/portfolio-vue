@@ -43,7 +43,7 @@
 
     </div>
 
-  <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
+  <b-modal :active.sync="isContactFormActive" :width="640" scroll="keep">
 
     <form v-on:submit.prevent="onSubmitForm()" class="card">
         <div class="modal-card" style="width: auto">
@@ -117,14 +117,14 @@ export default {
       
 
     },openContactForm() {
-      this.isCardModalActive = true;
+      this.isContactFormActive = true;
     },
     close(){
 
-      this.isCardModalActive = false;
+      this.isContactFormActive = false;
     },
     onSubmitForm: function(){     
-      this.isCardModalActive = false;
+      this.isContactFormActive = false;
 
       var input = this.form;
       this.form = {
