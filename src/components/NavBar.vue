@@ -45,7 +45,7 @@
 
   <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
 
-    <form v-on:submit.prevent="onSubmitForm()">
+    <form v-on:submit.prevent="onSubmitForm()" class="card">
         <div class="modal-card" style="width: auto">
           <header class="modal-card-head">
             <p class="modal-card-title">Contact Me</p>
