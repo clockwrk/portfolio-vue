@@ -26,7 +26,7 @@
       </div>
     </div>
     </div>
-        <b-modal :active.sync="isProjectModalActive" :width="640" scroll="keep">
+        <b-modal :active.sync="isProjectModalActive" :width="640" scroll="keep"  >
           <div class="card">
               <div class="hero is-medium card-image">
 
@@ -127,6 +127,9 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+.modal {
+  z-index: 10;
 }
 
 </style>
