@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <div id="app-container">
     <NavBar></Navbar>
     <Home></Home>
     <section id="AboutMe">About Me</section>
@@ -9,7 +8,6 @@
     <Projects></Projects>
     <Social></Social>
     <!-- <section id="Social">Social</section>  -->
-    </div>
   </div>
 </template>
 
@@ -42,7 +40,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  z-index: 5;
 }
 
 section {
