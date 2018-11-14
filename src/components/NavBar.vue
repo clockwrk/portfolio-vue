@@ -157,8 +157,8 @@ export default {
   text-align: left !important;
 }
 .navbar {
-  overflow: hidden;
-  position: fixed;
+   /* overflow: hidden; */
+  position: fixed; 
   top: 0;
   width: 100%;
 }
