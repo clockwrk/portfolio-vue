@@ -1,8 +1,11 @@
 <template>
     <section id="Skills">
+
         <div class="container is-narrow">
         <div class="box">
           <div class="content">
+        <h2 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">SkillsS</h2>
+
             <div class="columns is-centered">
               <div class="column">
                 <!-- <figure class="image"><img class="is-skill-icon" src="img/icon-designer.svg"></figure> -->
@@ -56,6 +59,9 @@ export default {
 </script>
 
 <style scoped>
+.section {
+    padding-bottom: 14rem;
+}
 
     li {
         list-style-type: none;

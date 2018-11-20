@@ -2,7 +2,7 @@
   <div id="app">
     <NavBar></Navbar>
     <Home></Home>
-    <section id="AboutMe">About Me</section>
+    <AboutMe></AboutMe>
     <!-- <section id="Skills">Skills</section> -->
     <Skills></Skills>
     <Projects></Projects>
@@ -18,6 +18,7 @@ import Home from './components/Home.vue'
 import Projects from './components/Projects.vue'
 import Social from './components/Social.vue'
 import Skills from './components/Skills.vue'
+import AboutMe from './components/AboutMe.vue'
 
 export default {
   name: 'app',
@@ -27,7 +28,8 @@ export default {
     Home,
     Projects,
     Social,
-    Skills
+    Skills, 
+    AboutMe
   }
 }
 </script>
@@ -43,6 +45,7 @@ export default {
 }
 
 section {
+  padding-top: 3em;
   min-height: 100vh;
 }
 

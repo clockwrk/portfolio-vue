@@ -168,14 +168,14 @@ export default {
   top: 10px;
 }
 
-.fade-in {
+/* .fade-in {
     opacity: 1;
     transition: 2s opacity;
 }
 .fade-out {
     opacity: 0;
     transition: none;
-}
+} */
 
 
 
