@@ -1,5 +1,5 @@
 <template>
-    <section id="Social"> SOCIAL
+    <section id="Social"> SOCIALite
 		<div class="hero-body container">
 			<div class="container has-text-centered">
 				<h2 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Projects</h2>
