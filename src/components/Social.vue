@@ -3,12 +3,14 @@
 		<div class="hero-body container">
 			<div class="container has-text-centered">
 				<h2 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Connect</h2>
+			
 			<a href="https://www.codewars.com/users/clockwrk/" target="_blank" class="icon-button code-wars"><i class="icon-code-wars fa fa-fw fa-code"></i><span></span></a>
 			<a href="mailto:JoseRenteria.SF@outlook.com"  class="icon-button mail"><i class="icon-mail fa fa-fw fa-envelope"></i><span></span></a>
 			<a href="tel:+15104998014" class="icon-button phone"><i class="icon-phone fa fa-fw fa-phone"></i><span></span></a>
 			<a href="/resume" download="Jose-Renteria-Resume.pdf" class="icon-button resume" ><i class="icon-resume fa fa-fw fa-file"></i><span></span></a>
 			<a href="https://www.linkedin.com/in/JoseRenteriaSF/" target="_blank" class="icon-button linkedin"><i class="icon-linkedin fa fa-fw fa-linkedin-square "></i><span></span></a>
 			<a href="https://github.com/clockwrk/" target="_blank" class="icon-button github"><i class="icon-github fa fa-fw fa-github"></i><span></span></a>
+			
 
 			</div>
 		</div>
@@ -143,6 +145,13 @@ body {
 }
 .hero-body {
 	/* margin-top: 10em; */
+}
+
+@media only screen and (max-width: 600px) {
+	.icon-button {
+		    margin: 0 auto;
+			display: block;
+	}
 }
 
 </style>

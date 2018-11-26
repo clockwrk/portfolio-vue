@@ -3,8 +3,8 @@
 
         <div class="container is-narrow">
         <div class="box">
-          <div class="content">
-        <h2 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">SkillsS</h2>
+          <div class="content" >
+        <h2 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile" id="Skills">SkillsS</h2>
 
             <div class="columns is-centered">
               <div class="column">
@@ -60,7 +60,7 @@ export default {
 
 <style scoped>
 .section {
-    padding-bottom: 14rem;
+    padding-bottom: 13rem;
 }
 
     li {
@@ -79,7 +79,7 @@ export default {
     padding: .75rem;
 }
 .container {
-    margin-top: -14rem;
+    margin-top: -13rem;
     padding-bottom: 1rem;
 }
 
