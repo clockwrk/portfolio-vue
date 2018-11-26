@@ -1,8 +1,8 @@
 <template>
-    <section id="Social"> SOCIALite
+    <section id="Social">
 		<div class="hero-body container">
 			<div class="container has-text-centered">
-				<h2 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Projects</h2>
+				<h2 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Connect</h2>
 			<a href="https://www.codewars.com/users/clockwrk/" target="_blank" class="icon-button code-wars"><i class="icon-code-wars fa fa-fw fa-code"></i><span></span></a>
 			<a href="mailto:JoseRenteria.SF@outlook.com"  class="icon-button mail"><i class="icon-mail fa fa-fw fa-envelope"></i><span></span></a>
 			<a href="tel:+15104998014" class="icon-button phone"><i class="icon-phone fa fa-fw fa-phone"></i><span></span></a>
@@ -142,7 +142,7 @@ body {
 	color: white;
 }
 .hero-body {
-	margin-top: 10em;
+	/* margin-top: 10em; */
 }
 
 </style>
