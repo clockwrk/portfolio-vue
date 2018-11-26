@@ -79,7 +79,7 @@ export default {
     padding: .75rem;
 }
 .container {
-    margin-top: -13rem;
+    margin-top: -17rem;
     padding-bottom: 1rem;
 }
 

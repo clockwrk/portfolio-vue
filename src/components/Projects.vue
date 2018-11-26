@@ -2,13 +2,11 @@
   <section id="Projects" class="hero is-info is-fullheight">
     <!-- <div class="hero is-info"> -->
 
-    <div class="hero-body container">
+    <div class="hero-body">
       <div class="container has-text-centered">
         <h2 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Projects</h2>
 
-      <p data-v-6cb1b4f6="" class="content">Lorem ipsum dolor amet affogato taiyaki skateboard lomo schlitz four loko street art cornhole vaporware activated charcoal kinfolk post-ironic yuccie. Hoodie put a bird on it aesthetic live-edge subway tile celiac health goth food truck. Hot chicken health goth biodiesel art party authentic, palo santo activated charcoal jianbing sriracha. Cold-pressed mustache asymmetrical health goth. Scenester hexagon tofu try-hard activated charcoal 3 wolf moon church-key trust fund gochujang pok pok selvage chicharrones marfa 8-bit vinyl.
-Deep v leggings truffaut vape cold-pressed schlitz normcore craft beer pok pok readymade. Vaporware retro green juice echo park, hella chia everyday carry health goth 8-bit migas occupy woke salvia mumblecore. Biodiesel VHS listicle messenger bag, heirloom coloring book polaroid hexagon green juice meditation. Sriracha put a bird on it thundercats lyft iceland kombucha. +1 authentic unicorn small batch flexitarian. Roof party adaptogen selfies bitters brunch listicle chicharrones jean shorts taiyaki food truck hashtag aesthetic heirloom actually cardigan.
-Readymade messenger bag photo booth plaid cred flannel. Taxidermy hoodie authentic iPhone microdosing glossier cred yr palo santo austin meditation. Pug jianbing raw denim letterpress selvage. Af brooklyn yuccie small batch narwhal 90's. Kombucha sustainable 8-bit, yuccie before they sold out readymade iceland brooklyn lomo pabst scenester. Messenger bag VHS aesthetic master cleanse pok pok sriracha occupy, ethical bushwick chartreuse banjo waistcoat live-edge everyday carry tote bag. Beard flannel subway tile, fixie live-edge keytar helvetica sustainable pok pok waistcoat normcore stumptown put a bird on it 90's.</p>
+      <p class="content">The website you are currently viewing was built with Vue but I am familiar with many other frameworks. I've built projects with AngularJS, React and even plain old Vanilla Javascript. Here are some examples of what I am capable of building.</p>
       <!-- </div> -->
     <!-- </div> -->
     <div class="container is-narrow">
@@ -147,14 +145,18 @@ section {
   color:blue;
 }
 
-.container {
-    /* margin-top: -14rem; */
-    padding-bottom: 1rem;
+.content {
+    /* margin-bottom: 12em; */
 }
 
-.hero-body.container {
+.container {
+    /* margin-top: -14rem; */
+    /* padding-bottom: 1rem; */
+}
+
+.hero-body {
   /* margin-top: 13em; */
-  padding-bottom: 2em;
+  /* padding-bottom: 2em; */
 
 }
 
