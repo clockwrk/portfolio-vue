@@ -50,4 +50,8 @@ section {
 section:first-of-type {
   min-height: 100vh;
 }
+
+section:last-child {
+  min-height: 0vh;
+}
 </style>

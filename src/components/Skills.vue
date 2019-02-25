@@ -4,35 +4,32 @@
         <div class="container is-narrow">
         <div class="box">
           <div class="content" >
-        <h2 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile" id="Skills">SkillsS</h2>
+        <h2 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile" id="Skills">Tech Skills</h2>
 
             <div class="columns is-centered">
               <div class="column">
                 <!-- <figure class="image"><img class="is-skill-icon" src="img/icon-designer.svg"></figure> -->
                 <font-awesome-icon icon="clipboard-list" size="5x" />
-                <h1 class="title is-size-4 is-spaced">Developer</h1>
-                <p>I'm curious how things work.</p>
-                <p class="list-title has-text-primary has-text-weight-normal">Front-end frameworks I've used</p>
-                <p>Vue, React, AngularJS</p>
-                <p class="list-title has-text-primary has-text-weight-normal">Design Tools:</p>
+                <h1 class="title is-size-4 is-spaced">QA Tools</h1>
+                <!-- <p>I'm curious how things work.</p> -->
+
+                <!-- <p class="list-title has-text-primary has-text-weight-normal is-centered">QA Tools</p> -->
                 <ul>
-                  <li>Balsamiq Mockups</li>
-                  <li>Figma</li>
-                  <li>Invision</li>
-                  <li>Marvel</li>
-                  <li>Pen &amp; Paper</li>
-                  <li>Sketch</li>
-                  <li>Webflow</li>
-                  <li>Zeplin</li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://charlesproxy.com">Charles Proxy</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://newrelic.com">New Relic</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://testlio.com">Testlio</a></li>
+                  <li><a target="_blank" rel="noopener noreferrer" href="https://www.gurock.com/testrail">TestRail</a></li>
                 </ul>
               </div>
               <div class="column">
                 <font-awesome-icon icon="code" size="5x" />
-                <h1 class="title is-size-4 is-spaced">Front-end Developer</h1>
-                <p>I tend to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
+                <h1 class="title is-size-4 is-spaced">Developer toolbox</h1>
+                <!-- <p>I tend to code things from scratch, and enjoy bringing ideas to life in the browser.</p> -->
+                <p class="list-title has-text-primary has-text-weight-normal">Front-end frameworks I've used</p>
+                <p>Vue, React, AngularJS</p>
                 <p class="list-title has-text-primary has-text-weight-normal">Languages I speak:</p>
-                <p>HTML, Pug, Slim, CSS, Sass, Less</p>
-                <p class="list-title has-text-primary has-text-weight-normal">Dev Tools:</p>
+                <p>JavaScript, C++, Java</p>
+                <!-- <p class="list-title has-text-primary has-text-weight-normal">Dev Tools:</p>
                 <ul>
                   <li>Atom</li>
                   <li>Bitbucket</li>
@@ -43,7 +40,7 @@
                   <li>Github</li>
                   <li>Gitlab</li>
                   <li>Terminal</li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
@@ -63,15 +60,19 @@ export default {
     padding-bottom: 13rem;
 }
 
-    li {
+.content ul {
+    margin-left: 0px;
+}
+
+li {
         list-style-type: none;
-    }
+}
 
-    #box {
+#box {
         text-align: center;
-    }
+}
 
-    .column {
+.column {
     display: block;
     flex-basis: 0;
     flex-grow: 1;
@@ -79,7 +80,7 @@ export default {
     padding: .75rem;
 }
 .container {
-    margin-top: -17rem;
+    /* margin-top: -17rem; */
     padding-bottom: 1rem;
 }
 

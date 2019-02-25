@@ -113,8 +113,11 @@ export default {
 <style scoped>
 section {
   min-height: 100vh;
-
 }
+
+/* .content {
+    margin-bottom: 12em;
+} */
 
 .carousel-img {
   max-width: 80vw;
@@ -141,9 +144,7 @@ section {
   z-index: 10;
 }
 
-.hero.is-info .title{
-  color:blue;
-}
+
 
 .content {
     /* margin-bottom: 12em; */
