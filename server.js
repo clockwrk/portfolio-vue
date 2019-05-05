@@ -53,7 +53,7 @@ app.post('/send-email', function(req, res) {
 });
 
 app.get('/resume', function(req, res){
-    let file = path.join(__dirname, './src/assets/Jose_Renteria_Resume.pdf');
+    let file = path.join(__dirname, './src/assets/Jose_Renteria_Resume.doc');
     res.download(file);
 });
 
